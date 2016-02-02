@@ -1,12 +1,7 @@
-@-moz-viewport { width: device-width; scale: 1; }
-@-ms-viewport { width: device-width; scale: 1; }
-@-o-viewport { width: device-width; scale: 1; }
-@-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
 html {
 	box-sizing: border-box;
-
 	-moz-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -57,29 +52,18 @@ h1 {
   color: $white;
   z-index: 1;
   margin: 0 30%;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-  -webkit-animation-play-state: paused; 
+  @include spin(2s);
   animation-play-state: paused; 
-}
-
-.icon-logo:hover {
-  -webkit-animation-play-state: running;
+  &:hover, &:active, &:focus {
   animation-play-state: running;
+  color: $logo-color;
 }
-
-@keyframes spin {
-  100% {-webkit-transform: rotate(1turn); }
+  
+  
 }
 
 @keyframes spin {
   100% {transform: rotate(1turn); }
-}
-
-.icon-logo:hover,
-.icon-logo:active,
-.icon-logo:focus {
-  color: $logo-color;
 }
 
 .icon-mask {
