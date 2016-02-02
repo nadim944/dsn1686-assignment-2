@@ -1,0 +1,97 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-color: black;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 9em;
+  font-family: 'arial';
+}
+
+
+@media screen and (max-width: 762px) {
+    h1{
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 502px) {
+    h1{
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-size: 3em;
+    }
+}
+
+.icon-logo {
+  font-size: 7em;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  margin: 0 30%;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  -webkit-animation-play-state: paused; 
+  animation-play-state: paused; 
+}
+
+.icon-logo:hover {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  100% {-webkit-transform: rotate(1turn); }
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
+.icon-logo:hover,
+.icon-logo:active,
+.icon-logo:focus {
+  color:#FFFF00;
+}
+
+.icon-mask {
+  font-size: 5em;
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  margin: 0 55;
+}
+
+.icon-mask:hover,
+.icon-mask:active,
+.icon-mask:focus {
+  color:#FFFF00;
+}
