@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: $white;
   text-align: center;
   font-size: 9em;
   font-family: 'arial';
@@ -54,7 +54,7 @@ h1 {
 .icon-logo {
   font-size: 7em;
   position: relative;
-  color: #fff;
+  color: $white;
   z-index: 1;
   margin: 0 30%;
   -webkit-animation: spin 2s linear infinite;
@@ -79,13 +79,13 @@ h1 {
 .icon-logo:hover,
 .icon-logo:active,
 .icon-logo:focus {
-  color:#FFFF00;
+  color: $logo-color;
 }
 
 .icon-mask {
   font-size: 5em;
   position: absolute;
-  color: #fff;
+  color: $white;
   z-index: 1;
   margin: 0 55;
 }
