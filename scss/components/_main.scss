@@ -1,0 +1,81 @@
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-color: black;
+}
+
+h1 {
+  color: $white;
+  text-align: center;
+  font-size: 9em;
+  font-family: 'arial';
+}
+
+
+@media screen and (max-width: 762px) {
+    h1{
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 502px) {
+    h1{
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-size: 3em;
+    }
+}
+
+.icon-logo {
+  font-size: 7em;
+  position: relative;
+  color: $white;
+  z-index: 1;
+  margin: 0 30%;
+  @include spin(2s);
+  animation-play-state: paused; 
+  &:hover, &:active, &:focus {
+  animation-play-state: running;
+  color: $logo-color;
+}
+  
+  
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
+.icon-mask {
+  font-size: 5em;
+  position: absolute;
+  color: $white;
+  z-index: 1;
+  margin: 0 55;
+}
+
+.icon-mask:hover,
+.icon-mask:active,
+.icon-mask:focus {
+  color:#FFFF00;
+}

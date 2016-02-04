@@ -1,0 +1,4 @@
+ @mixin spin($duration) {
+   animation: spin $duration linear infinite
+ };
+
